@@ -92,7 +92,7 @@ export default function SearchBar() {
           <span>Search movies/TV Shows</span>
           <div>
             <KbdGroup>
-              <Kbd className="group-hover:text-foreground">CtrlK</Kbd>
+              <Kbd className="group-hover:text-white">CtrlK</Kbd>
             </KbdGroup>
           </div>
         </Button>
