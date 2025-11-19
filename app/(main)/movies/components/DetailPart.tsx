@@ -2,7 +2,7 @@ import { Movie } from "@/types/movie"
 import Image from "next/image"
 import { MonitorDown, Play, StarIcon } from "lucide-react"
 import FancyBtn from "@/components/FancyBtn";
-import { useIsMobile } from "@/hooks/use-mobile";
+import { useIsMobile } from "@/hooks/useMobile";
 import { cn } from "@/lib/utils";
 
 interface DetailPartProps {

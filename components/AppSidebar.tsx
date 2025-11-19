@@ -7,9 +7,15 @@ import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
+  SidebarHeader,
+  SidebarMenu,
+  SidebarMenuItem,
 } from "@/components/ui/sidebar"
 import { user } from "@/data/dummy"
 import NavPanel from "./NavPanel"
+import { LangSelection } from "./LangSelection"
+import SocialMedia from "./SocialMedia"
+import MyLogo from "./MyLogo"
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
@@ -34,14 +40,13 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       {/*     </SidebarMenuItem> */}
       {/*   </SidebarMenu> */}
       {/* </SidebarHeader> */}
-      <SidebarContent
-        className="bg-card"
-      >
+
+      <SidebarContent className="flex items-center my-4">
+        <LangSelection />
         <NavPanel />
+        <SocialMedia />
       </SidebarContent>
-      <SidebarFooter
-        className="bg-card"
-      >
+      <SidebarFooter>
         <NavUser user={user} />
       </SidebarFooter>
     </Sidebar>

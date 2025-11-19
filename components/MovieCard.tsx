@@ -16,7 +16,7 @@ export default function MovieCard({
   return (
     <div
       className="flex flex-col justify-between bg-card rounded-xl border border-border/50 shadow-md 
-      hover:border-border hover:shadow-lg hover:-translate-y-2 hoverEffect cursor-pointer"
+      hover:border-border hover:shadow-lg hover:-translate-y-2 cursor-pointer hover-effect"
     // onClick={onDetail}
     >
       <div className="relative h-82 sm:h-70 w-full">

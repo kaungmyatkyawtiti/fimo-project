@@ -1,6 +1,5 @@
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
-import MyLogo from "./MyLogo";
 
 interface AuthWelcomeProps {
   title: string;

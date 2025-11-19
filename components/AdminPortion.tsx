@@ -8,7 +8,6 @@ export default function AdminPotion() {
       <SearchBar />
       <div className="flex items-center gap-4">
         <ModeToggle />
-        <LogOut size={24} />
       </div>
     </div>
   )

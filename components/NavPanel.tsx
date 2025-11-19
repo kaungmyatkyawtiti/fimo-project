@@ -3,10 +3,17 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { LangSelection } from "./LangSelection";
 import { BookOpen, Clapperboard, HeartHandshake, Home, MessageCircleReply, Panda, PartyPopper, Tv } from "lucide-react";
-import SocialMedia from "./SocialMedia";
-import { useIsMobile } from "@/hooks/use-mobile";
+import {
+  SidebarGroup,
+  SidebarGroupLabel,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+  SidebarMenuSub,
+  SidebarMenuSubButton,
+  SidebarMenuSubItem,
+} from "@/components/ui/sidebar"
 
 export const links = [
   {
@@ -53,41 +60,30 @@ export const links = [
 
 export default function NavPanel() {
   const pathname = usePathname();
-  const isMobile = useIsMobile()
 
   return (
-    <div
-      className={cn(
-        "py-5 px-2 flex flex-col gap-4",
-        isMobile && "px-3"
-      )}
-    >
-      <div className="text-center">
-        <LangSelection />
-      </div>
-      <nav className="flex flex-col space-y-2">
+    <SidebarGroup>
+      <SidebarMenu className="gap-3">
         {
           links.map((link, ind) =>
             <Link
               key={ind}
               href={link.href}
-              className={cn(
-                "text-foreground/90 hover:text-foreground hover:bg-accent py-2 px-3 rounded-md hoverEffect font-semibold text-[15px] flex items-center gap-2",
-                pathname === link.href && "text-movie-orange hover:text-movie-orange bg-accent"
-              )}
             >
-              {link.icon}
-              {link.title}
+              <SidebarMenuItem>
+                <SidebarMenuButton
+                  className={cn(
+                    "w-full text-foreground/80 hover:text-foreground hover:bg-accent font-semibold text-[15px] hover-effect",
+                    pathname === link.href && "text-movie-orange hover:text-movie-orange bg-accent"
+                  )}
+                >
+                  {link.icon}
+                  {link.title}
+                </SidebarMenuButton>
+              </SidebarMenuItem>
             </Link>
-          )
-        }
-      </nav>
-      <div className={cn(
-        "px-2",
-        isMobile ? "self-start" : "self-center"
-      )}>
-        <SocialMedia />
-      </div>
-    </div>
+          )}
+      </SidebarMenu>
+    </SidebarGroup>
   )
 }

@@ -108,7 +108,7 @@ export default function SearchBar() {
           </DialogTitle>
         </DialogHeader>
 
-        <Command className="pt-2 pb-5 rounded-none bg-popover">
+        <Command className="rounded-none bg-popover">
           <CommandInput
             placeholder="Search movies/ TV Shows..."
             className="font-medium"
@@ -116,9 +116,7 @@ export default function SearchBar() {
           <CommandList>
             <CommandEmpty>No results found.</CommandEmpty>
 
-            <CommandGroup
-              heading="Movies"
-            >
+            <CommandGroup className="py-4">
               {
                 searches.map((search, ind) =>
                   <CommandItem

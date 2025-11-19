@@ -39,7 +39,7 @@ export default function SocialMedia() {
             href={social.href}
             target="_blank"
             className="p-2 rounded-full bg-black/5 dark:bg-white/60 text-black/80 
-            hover:text-movie-orange hover:bg-black/10 dark:hover:bg-white hover:shadow-md hoverEffect"
+            hover:text-movie-orange hover:bg-black/10 dark:hover:bg-white hover:shadow-md hover-effect"
           >
             {social.icon}
           </Link>

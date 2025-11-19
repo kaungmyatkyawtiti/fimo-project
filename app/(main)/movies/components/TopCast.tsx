@@ -19,7 +19,7 @@ export default function TopCast() {
           <div
             key={ind}
             className="w-35 bg-card rounded-lg flex flex-col items-center border border-border 
-            shadow-sm hover:shadow-md hover:scale-105 hoverEffect"
+            shadow-sm hover:shadow-md hover:scale-105 hover-effect"
           >
             <Image
               src={cast.image}
