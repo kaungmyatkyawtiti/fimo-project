@@ -73,7 +73,7 @@ export default function NavPanel() {
               <SidebarMenuItem>
                 <SidebarMenuButton
                   className={cn(
-                    "w-full text-foreground/80 hover:text-foreground hover:bg-accent font-semibold text-[15px] hover-effect",
+                    "w-full text-foreground/80 hover:text-foreground hover:bg-accent font-medium text-[15px] hover-effect",
                     pathname === link.href && "text-movie-orange hover:text-movie-orange bg-accent"
                   )}
                 >
